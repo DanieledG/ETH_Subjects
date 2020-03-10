@@ -1,0 +1,2 @@
+ctarget gives a segmentation fault if string is more than 23 characters. I need at ($rsp + 0x18) the hex for 40181d. I need to find a string that when converted to ascii ends with @CANGS
+

